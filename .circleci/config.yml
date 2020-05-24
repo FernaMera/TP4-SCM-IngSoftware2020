@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:14-jdk
+      - image: circleci/openjdk
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -48,7 +48,7 @@ jobs:
   test:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:14-jdk
+      - image: circleci/openjdk
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -69,7 +69,7 @@ jobs:
   validate:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:14-jdk
+      - image: circleci/openjdk
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -89,7 +89,7 @@ jobs:
   deploy:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:14-jdk
+      - image: circleci/openjdk
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
