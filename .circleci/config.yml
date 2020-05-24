@@ -38,6 +38,13 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
+      - run:
+          name: Run
+          command: ./gradlew bootRun
+      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: app/build/reports
+          destination: reports
+
   test:
     docker:
       # specify the version you desire here
@@ -109,7 +116,7 @@ workflows:
               - build
       - validate:
           requires:
-              - build
+              - test
       - deploy:
           requires:
-              - build
+              - validate
