@@ -104,7 +104,7 @@ jobs:
       TERM: dumb
 
     steps:
-      - run: echo "Hello"
+      - run: gradle run
 
 workflows:
   version: 2
