@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: Run
-          command: gradle bootRun
+          command: gradle run
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: app/build/reports
           destination: reports
@@ -64,7 +64,7 @@ jobs:
 
     steps:
       # run tests!
-      - run: gradle test
+      - run: gradle build test
 
   validate:
     docker:
