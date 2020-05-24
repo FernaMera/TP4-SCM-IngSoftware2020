@@ -51,8 +51,9 @@ jobs:
 
 workflows:
   version: 2
-  jobs:
-    - Build
-    - Test
-    - Validate
-    - Deploy
+  tp:
+    jobs:
+      - build
+      - test
+      - validate
+      - deploy
