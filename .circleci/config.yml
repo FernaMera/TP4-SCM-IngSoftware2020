@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  Build:
+  build:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
@@ -37,13 +37,16 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-  Test:
+
+  test:
     steps:
       # run tests!
       - run: gradle test
-  Validate:
+
+  validate:
     steps:
-  Deploy:
+
+  deploy:
     steps:
 
 workflows:
