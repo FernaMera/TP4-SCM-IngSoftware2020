@@ -48,12 +48,12 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      environment:
-        # Customize the JVM maximum heap limit
-        JVM_OPTS: -Xmx3200m
-        TERM: dumb
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
 
     steps:
       # run tests!
@@ -69,12 +69,12 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      environment:
-        # Customize the JVM maximum heap limit
-        JVM_OPTS: -Xmx3200m
-        TERM: dumb
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
 
     steps:
       - run: echo "Hello"
@@ -89,12 +89,12 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      environment:
-        # Customize the JVM maximum heap limit
-        JVM_OPTS: -Xmx3200m
-        TERM: dumb
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
 
     steps:
       - run: echo "Hello"
