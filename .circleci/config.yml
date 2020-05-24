@@ -45,9 +45,11 @@ jobs:
 
   validate:
     steps:
+      - run: echo "Hello"
 
   deploy:
     steps:
+      - run: echo "Hello"
 
 workflows:
   version: 2
