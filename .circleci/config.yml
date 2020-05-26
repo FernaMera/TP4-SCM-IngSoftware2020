@@ -78,12 +78,17 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
       
-      # run tests!     
+      # run tests!
+      - run: gradle build test
       - run:
-          command: mkdir -p ~/test-results
-      - run: gradle test
+          command: |
+            mkdir -p ~/test-results/junit/
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          when: always
       - store_test_results:
-          path: ~/test-results
+          path: ~/test-results/junit
+      - store_artifacts:
+          path: ~/test-results/junit
 
   validate:
     docker:
